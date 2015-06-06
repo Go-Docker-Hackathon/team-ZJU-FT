@@ -160,7 +160,7 @@
             data: {
               dockerfile:content
             },
-            type: 'POST',
+            type: 'GET',
             success: function(resp){
               $('#console-output').append(resp.result);
             },
@@ -192,4 +192,5 @@
          $('#testbtn').click(function () {
           testCode();
         });
+
        });

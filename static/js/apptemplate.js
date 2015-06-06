@@ -1,4 +1,5 @@
-  var dockerfile="redis"
+  var name="redis"
+  var editor
 
   function getUrlParameter(sParam)
   {
@@ -16,7 +17,7 @@
 
   $(document).ready(function () {
       $("#nav-templates").click();
-        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        editor = CodeMirror.fromTextArea(document.getElementById("code"), {
           lineNumbers: true,
           theme: "lesser-dark",
           scrollbarStyle: "overlay",
@@ -39,22 +40,21 @@
       type: 'GET',
       url: "/v1/name" ,
       data: {
-        dockerfile :name
+        name :name
       } ,
       success: function(data){
-        //highlight nav bar item
-        $('.nav-item').removeClass("active-li");
+        $('.nav-item-temp').removeClass("active-li");
         // $(document.getElementById('nav-'+data.title.toLowerCase())).addClass("active-li");
-        $(document.getElementById('nav-'+dockerfile)).addClass("active-li");
-        document.getElementById('template-title').innerHTML = dockerfile;
-
-        editor.setValue(data.result);
+        $(document.getElementById('nav-'+name)).addClass("active-li");
+        document.getElementById('template-title').innerHTML = name;
+        console.log(data.dockerfile);
+        editor.setValue(data.dockerfile);
       } , 
       dataType: 'json'
     });
   }
 
-  getTemplate(dockerfile);
+  getTemplate(name);
 
          $('.nav-item').click(function(){
           window.location.href='./page?tutname='+this.id.substr(4);

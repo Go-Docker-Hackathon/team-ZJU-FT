@@ -22,8 +22,8 @@ var dockerfile Dockerfile
 // @router / [get]
 func (this *TmpController) Get() {
 	name := this.Input().Get("name")
-	for i, name := range dockerfile_names {
-		if strings.ToLower(name) == name {
+	for i, dockerfile_name := range dockerfile_names {
+		if strings.ToLower(name) == dockerfile_name {
 			index = i
 			break
 		}
