@@ -55,6 +55,11 @@ func init() {
 				&controllers.TmpController{},
 			),
 		),
+		beego.NSNamespace("/cdf",
+			beego.NSInclude(
+				&controllers.CdfController{},
+			),
+		),
 		// beego.NSNamespace("/term",
 		// 	beego.NSInclude(
 		// 		&controllers.TermController{},
