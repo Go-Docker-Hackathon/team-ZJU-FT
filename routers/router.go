@@ -60,11 +60,11 @@ func init() {
 				&controllers.CdfController{},
 			),
 		),
-		// beego.NSNamespace("/term",
-		// 	beego.NSInclude(
-		// 		&controllers.TermController{},
-		// 	),
-		// ),
+		beego.NSNamespace("/term",
+			beego.NSInclude(
+				&controllers.TermController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 	//beego.Router("/", &controllers.PageController{})

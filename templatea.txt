@@ -1,0 +1,8 @@
+#用户选用的基础镜像
+FROM ubuntu:latest
+#输入个人信息
+MAINTAINER 
+#输入执行用户
+USER 
+#输入镜像meta信息
+LABEL key value
