@@ -1,8 +1,9 @@
 package controllers
 
 import (
-	"fmt"
+	"github.com/Go-Docker-Hackathon/team-ZJU-FT/builder/parser"
 	"github.com/astaxie/beego"
+	"strings"
 )
 
 type TestController struct {
@@ -15,6 +16,18 @@ type TestController struct {
 // @Success 200 {int} models.User.Id
 // @Failure 403 body is empty
 // @router / [get]
-func (u *TestController) Get() {
-	fmt.Println("Yes")
+func (this *TestController) Get() {
+	dockerfile := this.Input().Get("dockerfile")
+	_, err := parser.Parse(strings.NewReader(dockerfile))
+	response := make(map[string]string)
+	if err != nil {
+		response["code"] = "404"
+		response["result"] = err.Error()
+	} else {
+		response["code"] = "200"
+		response["result"] = "Congratulations!"
+	}
+
+	this.Data["json"] = response
+	this.ServeJson()
 }

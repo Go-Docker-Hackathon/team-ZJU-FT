@@ -159,7 +159,8 @@ func Tartoimage(imagename string, uploadtar string) *http.Response {
 	}
 
 	client := &http.Client{}
-	url := "http://10.10.105.204:2376/build?dockerfile=" + imagename + "/Dockerfile&q=true&t=" + imagename
+	//url := "http://10.10.105.204:2376/build?dockerfile=" + imagename + "/Dockerfile&q=true&t=" + imagename
+	url := "http://121.40.236.126:4243/build?dockerfile=" + imagename + "/Dockerfile&q=true&t=" + imagename
 	body, err := ioutil.ReadFile(imagename + "/deployments.tar.gz")
 	if err != nil {
 		panic(err)
