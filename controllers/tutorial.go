@@ -20,7 +20,7 @@ func init() {
 	}
 	//	defer session.Close() // Optional. Switch the session to a monotonic behavior.
 	session.SetMode(mgo.Strong, true)
-	c = session.DB("toturial").C("cmd")
+	c = session.DB("toturial").C("cmds")
 	lens = len(names)
 	fmt.Println("connected")
 }
@@ -57,7 +57,7 @@ func (this *TutorialController) Get() {
 	}
 	log.Println(cmd)
 	response["title"] = cmd.Type
-	response["content"] = cmd.Example
+	response["content"] = cmd.Intro
 	if index > 0 && index < lens-1 {
 		response["prev"] = names[index-1]
 		response["next"] = names[index+1]
@@ -68,7 +68,7 @@ func (this *TutorialController) Get() {
 		response["prev"] = names[index-1]
 		response["next"] = names[0]
 	}
-	response["code"] = "200"
+	response["code"] = cmd.Example
 	this.Data["json"] = response
 	this.ServeJson()
 }

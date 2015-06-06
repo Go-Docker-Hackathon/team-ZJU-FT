@@ -8,7 +8,7 @@ import (
 	"strings"
 	"unicode"
 
-	"github.com/docker/docker/builder/command"
+	"github.com/Go-Docker-Hackathon/team-ZJU-FT/builder/command"
 )
 
 // Node is a structure used to represent a parse tree.

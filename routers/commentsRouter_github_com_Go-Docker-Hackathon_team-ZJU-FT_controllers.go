@@ -6,70 +6,7 @@ import (
 
 func init() {
 	
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"],
-		beego.ControllerComments{
-			"Get",
-			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"],
-		beego.ControllerComments{
-			"Post",
-			`/`,
-			[]string{"post"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
-		beego.ControllerComments{
-			"Post",
-			`/`,
-			[]string{"post"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
-		beego.ControllerComments{
-			"Get",
-			`/:objectId`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
-		beego.ControllerComments{
-			"GetAll",
-			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
-		beego.ControllerComments{
-			"Put",
-			`/:objectId`,
-			[]string{"put"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
-		beego.ControllerComments{
-			"Delete",
-			`/:objectId`,
-			[]string{"delete"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:PageController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:PageController"],
-		beego.ControllerComments{
-			"Get",
-			`/`,
-			[]string{"get"},
-			nil})
-
 	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TermController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TermController"],
-		beego.ControllerComments{
-			"Get",
-			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"],
 		beego.ControllerComments{
 			"Get",
 			`/`,
@@ -129,6 +66,76 @@ func init() {
 		beego.ControllerComments{
 			"Logout",
 			`/logout`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
+		beego.ControllerComments{
+			"Get",
+			`/:objectId`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
+		beego.ControllerComments{
+			"GetAll",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
+		beego.ControllerComments{
+			"Put",
+			`/:objectId`,
+			[]string{"put"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
+		beego.ControllerComments{
+			"Delete",
+			`/:objectId`,
+			[]string{"delete"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:PageController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:PageController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TerminalController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TerminalController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
 			[]string{"get"},
 			nil})
 
