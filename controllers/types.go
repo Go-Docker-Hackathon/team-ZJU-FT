@@ -36,3 +36,8 @@ type Command struct {
 	Type    string
 	Intro   string
 }
+
+type Dockerfile struct {
+	Template string
+	Type     string
+}
