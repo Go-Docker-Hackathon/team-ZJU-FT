@@ -34,4 +34,5 @@ type AuthConfigurations struct {
 type Command struct {
 	Example string
 	Type    string
+	Intro   string
 }
