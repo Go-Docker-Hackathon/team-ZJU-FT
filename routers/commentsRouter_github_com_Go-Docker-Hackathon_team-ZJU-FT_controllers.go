@@ -6,6 +6,55 @@ import (
 
 func init() {
 	
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"Post",
+			`/`,
+			[]string{"post"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"GetAll",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"Get",
+			`/:uid`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"Put",
+			`/:uid`,
+			[]string{"put"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"Delete",
+			`/:uid`,
+			[]string{"delete"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"Login",
+			`/login`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
+		beego.ControllerComments{
+			"Logout",
+			`/logout`,
+			[]string{"get"},
+			nil})
+
 	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:BuildController"],
 		beego.ControllerComments{
 			"Get",
@@ -80,55 +129,6 @@ func init() {
 		beego.ControllerComments{
 			"Get",
 			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"Post",
-			`/`,
-			[]string{"post"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"GetAll",
-			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"Get",
-			`/:uid`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"Put",
-			`/:uid`,
-			[]string{"put"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"Delete",
-			`/:uid`,
-			[]string{"delete"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"Login",
-			`/login`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:UserController"],
-		beego.ControllerComments{
-			"Logout",
-			`/logout`,
 			[]string{"get"},
 			nil})
 

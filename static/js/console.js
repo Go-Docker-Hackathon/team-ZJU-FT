@@ -8,7 +8,6 @@
   var next='';
 
   $(document).ready(function () {
-      //============ Create a socket
       //socket = new WebSocket('ws://' + window.location.host + '/console/sync?tutname=' + $('#tutname').text());
       socket = new WebSocket("ws://" + url_websocket + "/v1/testbuild/");
 
@@ -16,7 +15,6 @@
       $("#nav-debug").addClass("active")
       //$(".dropdown-menu li a")[2].click();
 
-  //============ code mirror editor 
   var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
     lineNumbers: true,
     theme: "lesser-dark",
@@ -71,10 +69,10 @@
   Messenger.options = {
    parentLocations: ['nav'],
   	   // extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
-       theme: 'flat',
-     }
+      theme: 'flat',
+    }
 
-     socket.onopen = function(){
+    socket.onopen = function(){
       Messenger().post({
         message: 'Server connected.',
         hideAfter : 3,
@@ -118,7 +116,6 @@
             errorMessage: 'Error sending code.',
             progressMessage: 'Code on the way...'
           }, {
-            /* These options are provided to $.ajax, with success and error wrapped */
             url: '/v1/testbuild/',
             data: {
               tutname:tutname,
@@ -126,6 +123,31 @@
             },
             type: 'POST',
 
+            error: function(resp){
+              if (resp.status === 409)
+                return "Error sending code.";
+            }
+          });
+
+         }
+         var testCode = function(){
+           var tutname = $('#tutname').text();
+           var content = editor.getValue();
+           Messenger().run({
+            action: $.ajax,
+            hideAfter : 3,
+            successMessage: 'Done',
+            errorMessage: 'Error sending code.',
+            progressMessage: 'Testing...'
+          }, {
+            url: '/v1/test/',
+            data: {
+              dockerfile:content
+            },
+            type: 'POST',
+            success: function(resp){
+              $('#console-output').append(resp.result);
+            },
             error: function(resp){
               if (resp.status === 409)
                 return "Error sending code.";
@@ -147,11 +169,7 @@
          $('#submitbtn').click(function () {
           postCode();
         });
-
-         $('#clearconsolebtn').click(function () {
-          $('#console-output').html("");
-  	//$('#console-output').empty();
-  });
-    //    $('#debugbtn').click(function () {
-    // });
-});
+         $('#testbtn').click(function () {
+          testCode();
+        });
+       });

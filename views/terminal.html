@@ -15,16 +15,16 @@
   <!-- Custom Fonts -->
   <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+  <!-- CodeMirror CSS -->
+  <link  href="/static/css/codemirror.css" rel="stylesheet">
+  <link  href="/static/css/fullscreen.css" rel="stylesheet">
+  <link  href="/static/css/theme/lesser-dark-purple.css" rel="stylesheet">
+  <link  href="/static/css/simplescrollbars.css" rel="stylesheet">
+
   <!-- Custom CSS -->
   <link href="/static/css/sb-admin.css" rel="stylesheet">
   <link href="/static/css/custom.css" rel="stylesheet">
   <link href="/static/css/buttons.css" rel="stylesheet">
-
-  <!-- CodeMirror CSS -->
-  <link  href="/static/css/codemirror.css" rel="stylesheet">
-  <link  href="/static/css/fullscreen.css" rel="stylesheet">
-  <link  href="/static/css/theme/lesser-dark.css" rel="stylesheet">
-  <link  href="/static/css/simplescrollbars.css" rel="stylesheet">
 
   <!-- Jquery -->
   <script src="/static/js/jquery-1.11.3.min.js"></script>
@@ -46,6 +46,9 @@
 
   <!-- Marked -->
   <script src="/static/js/marked.min.js"></script>
+
+  <!-- ZeroClipboard -->
+  <!-- <script src="/static/js/ZeroClipboard.js"></script> -->
 
   <link  href="/static/css/terminal.min.css" rel="stylesheet">
 
@@ -139,78 +142,72 @@
 
       <!-- Sidebar Menu -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
-        <ul class="nav navbar-nav side-nav">
-          <li>
+        <ul id="sidenav" class="nav navbar-nav side-nav">
+          <!-- <li>
             <a href=""><i class="fa fa-fw fa-home"></i> Home</a>
-          </li>
-
+          </li> -->
           <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#tutorials"><i class="fa fa-fw fa-arrows-v" id="nav-tutorials"></i> Tutorials <i class="fa fa-fw fa-caret-down"></i></a>
-            <ul id="tutorials" class="collapse">
-              <li id="nav-from" class="nav-item">
+           <ul id="tutorials" class="collapse">
+              <li id="nav-from" href="/v1/page" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> FROM</a>
               </li>
-              <li id="nav-maintainer" class="nav-item">
+              <li id="nav-maintainer" href="/v1/page?tutname=maintainer" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> MAINTAINER</a>
               </li>
-              <li id="nav-run" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> RUN</a>
-              </li>
-              <li id="nav-cmd" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> CMD</a>
-              </li>
-              <li id="nav-label" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> LABEL</a>
-              </li>
-              <li id="nav-expose" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> EXPOSE</a>
-              </li>
-              <li id="nav-env" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> ENV</a>
-              </li>
-              <li id="nav-add" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> ADD</a>
-              </li>
-              <li id="nav-copy" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> COPY</a>
-              </li>
-              <li id="nav-entrypoint" class="nav-item"> 
-                <a><i class="fa fa-fw fa-edit"></i> ENTRYPOINT</a>
-              </li>
-              <li id="nav-volume" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> VOLUME</a>
-              </li>
-              <li id="nav-user" class="nav-item">
+              <li id="nav-user" href="/v1/page?tutname=user" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> USER</a>
               </li>
-              <li id="nav-workdir" class="nav-item">
+              <li id="nav-label" href="/v1/page?tutname=label" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> LABEL</a>
+              </li>
+              <li id="nav-env" href="/v1/page?tutname=env" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> ENV</a>
+              </li>
+              <li id="nav-workdir" href="/v1/page?tutname=workdir" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> WORKDIR</a>
               </li>
-              <li id="nav-onbuild" class="nav-item">
+              <li id="nav-run" href="/v1/page?tutname=run" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> RUN</a>
+              </li>
+              <li id="nav-copy" href="/v1/page?tutname=copy" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> COPY</a>
+              </li>
+              <li id="nav-add" href="/v1/page?tutname=add" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> ADD</a>
+              </li>
+              <li id="nav-volume" href="/v1/page?tutname=volume" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> VOLUME</a>
+              </li>
+              <li id="nav-onbuild" href="/v1/page?tutname=onbuild" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> ONBUILD</a>
+              </li>
+              <li id="nav-expose" href="/v1/page?tutname=expose" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> EXPOSE</a>
+              </li>
+              <li id="nav-entrypoint" href="/v1/page?tutname=entrypoint" class="nav-item"> 
+                <a><i class="fa fa-fw fa-edit"></i> ENTRYPOINT</a>
+              </li>
+              <li id="nav-cmd" href="/v1/page?tutname=cmd" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> CMD</a>
               </li>
             </ul>
           </li>
 
 
-          <li>
-            <a href=""><i class="fa fa-fw fa-desktop"></i> PlayGround</a>
-          </li>
-          <li>
-            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+          <li class="active">
+            <a href="/v1/terminal"><i class="fa fa-fw fa-desktop"></i> PlayGround</a>
           </li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
     </nav>
 
-    <div id="page-wrapper tight">
-      <div class="container-fluid tight">
-
-        <!-- Main Content -->
-        <div class ="col-lg-6 tight terminal-wrapper">
-          <!-- Page Heading -->
-          <div id="terminal-panel" class="col-lg-12 col-terminal">
+    <div id="page-wrapper ">
+      <div class="container-wrapper">
+        <div id="container-head" class="row tight"></div>
+        <div class ="col-lg-6 panel tight terminal-wrapper">
+          <div id="terminal-panel" class="col-lg-12 tight">
           </div>
 
         </div>
@@ -218,25 +215,21 @@
 
         <!-- Code Editor -->
         <div class ="col-lg-6 tight">
-            <div class="sticked tight">
+            <div class="tight">
 
               <div class="col-lg-12 text-left tight">
                  <article>
                   <form><textarea id="code" name="code" rows="5"class="tight"></textarea></form>
                 </article>
+                <a id="generatebtn" class="btn btn-primary" role="button">Generate</a>
+                <a id="clearbtn" class="btn btn-default" role="button">Clear</a>
+                <a id="copybtn" class="btn btn-default" role="button">Copy</a>
 
-                <a id="submitbtn" class="btn btn-primary " role="button">Submit</a>
-                <a class="btn btn-default " role="button">Reset</a>
-                <a id="debugbtn" class="btn btn-default " role="button">debug</a>
               </div>
 
             </div>
         </div>
         <!-- /Code Editor -->
-
-        <!--  </div> -->
-
-        <!-- /.row -->
       </div>
       <!-- /.container-fluid -->
 
@@ -247,6 +240,7 @@
 
   </div>
   <!-- /#wrapper -->
+  <!--
   <div class="footer-footer">
     <footer class="footer">
       <div id="copy-right">
@@ -254,6 +248,7 @@
       </div>
     </footer>
   </div>
+  -->
 
   <!-- jQuery -->
   <script src="/static/js/jquery.js"></script>

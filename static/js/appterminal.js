@@ -13,9 +13,23 @@
       socket = new WebSocket("ws://" + url_websocket + "/v1/testbuild/");
 
       $("#nav-tutorials").click();
-      $("#nav-debug").addClass("active")
+      $("#nav-debug").addClass("active");
       //$(".dropdown-menu li a")[2].click();
 
+  // $(".CodeMirror").css({"border-radius": "0"});
+
+  //zeroclipboard
+  // var client = new ZeroClipboard( document.getElementById("copy-button") );
+  // client.on( "ready", function( readyEvent ) {
+  //   // alert( "ZeroClipboard SWF is ready!" );
+
+  //   client.on( "aftercopy", function( event ) {
+  //     // `this` === `client`
+  //     // `event.target` === the element that was clicked
+  //     event.target.style.display = "none";
+  //     alert("Copied text to clipboard: " + event.data["text/plain"] );
+  //   } );
+  // } );
 
   var terminal = new Terminal('terminal-panel', {theme: 'interlaced'}, {
     execute: function(cmd, args) {
@@ -43,7 +57,6 @@
             case 'ver':
             case 'version':
                 return '1.0.0';
-
             default:
                 // Unknown command.
                 return "";
@@ -66,7 +79,8 @@
     }
   });
 
-  $('.CodeMirror').height($(window).height()-200);
+  $('.CodeMirror').height($(window).height()-110);
+  $('#terminal-panel').height($(window).height()-110);
   $('#tutorial-panel').css("min-height", function(){
     return $(window).height()-200;
   });
@@ -147,8 +161,8 @@
           getTutorial(next);
         });
          $('.nav-item').click(function(){
-          getTutorial(this.id.substr(4));
-        });
+          window.location.href='./page';
+         });
 
          $('#submitbtn').click(function () {
           postCode();

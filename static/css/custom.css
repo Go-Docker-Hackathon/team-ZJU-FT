@@ -12,20 +12,63 @@
   border-radius: 10px;
 }
 
-#terminal-wrapper {
-  margin-top:100px;
-  padding:0;
-  height:500px;
-  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAMAAACuX0YVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5T/wDltzBKAAAADklEQVR42mJgYGAECDAAAAUAAoeC334AAAAASUVORK5CYII=") top left repeat,rgba(0, 0, 0, 0.9);height:100%;left:0;pointer-events:none;top:0;width:100%;
+.nav::-webkit-scrollbar-thumb {
+  background-color:  #36434b;
 }
+
+.nav::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+.nav::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+      background-color: black;
+}
+
+#terminal-panel::-webkit-scrollbar-thumb {
+  background-color:  #36434b;
+}
+
+#terminal-panel::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+#terminal-panel::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+      background-color: black;
+}
+
+#terminal-wrapper {
+  padding:0;
+  min-height: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #222;
+}
+
 .tight{
   padding: 0;
   margin: 0;
   border-radius: 0;
+  border-color: #000;
+}
+
+#container-head{
+  width:100%;
+}
+
+.container-wrapper{
+  height: 500px;
+  padding: 50px 0 0 0;
+}
+
+.col-centered{
+float: none;
+ margin-left: auto;
+  margin-right: auto;
 }
 
 #tutorial-panel {
-  min-height: 760px;
   height: 100%;
 }
 
@@ -35,11 +78,6 @@
   /*color: #fe4902;*/
   color : #334;
   text-shadow: 2px 2px 2px #666; 
-}
-
-#terminal-panel {
-  height:100%;
-  border-radius: 10px;
 }
 
 #logo-nav {
@@ -58,7 +96,7 @@
 }
 
 .navbar-brand{
-  font: bold 27px Sans-Serif;
+  font: bold 27px arial,sans-serif;
   text-shadow: 0 2px 0 rgba(0, 0, 0, 1);
 }
 
@@ -94,7 +132,7 @@
 .small-page-header {
   padding-bottom: 2px;
   margin: 15px 0 15px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 0px solid #eee;
   font-size:30px;
 }
 .small-breadcrumb {
@@ -168,6 +206,9 @@ p.text {
 #copy-right {
   padding-left: 250px;
   padding-right: 20px;
+  position:relative;
+  bottom: 0;
+
 }
 
 .footer-footer {
@@ -210,6 +251,4 @@ p.text {
 	        box-shadow: 0 10px 6px -6px #777;
 }
 
-.col-terminal{
-  padding:0;
-}
+
