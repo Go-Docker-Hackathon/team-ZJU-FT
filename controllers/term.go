@@ -20,7 +20,7 @@ type TermController struct {
 	beego.Controller
 }
 
-var wsmap = make(map[string]*websocket.Conn)
+var wsmap_term = make(map[string]*websocket.Conn)
 
 // @Title testterm
 // @Description : start the websocket connection
@@ -33,7 +33,7 @@ func (o *TermController) Get() {
 	url := strings.Split(endpoint, ":")[0]
 	fmt.Println(url)
 	ws, err := websocket.Upgrade(o.Ctx.ResponseWriter, o.Ctx.Request, nil, 1024, 1024)
-	wsmap[url] = ws
+	wsmap_term[url] = ws
 	if _, ok := err.(websocket.HandshakeError); ok {
 		http.Error(o.Ctx.ResponseWriter, "Not a websocket handshake", 400)
 		return
@@ -46,14 +46,13 @@ func (o *TermController) Get() {
 	//start the pty
 	// ubuntu:latest
 	//c := exec.Command("docker", "run", "-it", "3f8c74dc67a86bc6", "/bin/bash")
-	c := exec.Command("docker", "run", "-it", "ubuntu:latest", "/bin/bash")
-	//c := exec.Command("/bin/bash")
+	c := exec.Command("/bin/bash")
 	f, err := pty.Start(c)
 	if err != nil {
 		panic(err)
 	}
 	//pipeReader, pipeWriter := io.Pipe()
-	wsm := wsmap[url]
+	wsm := wsmap_term[url]
 	go func() {
 
 		for {
