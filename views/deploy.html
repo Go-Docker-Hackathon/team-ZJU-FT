@@ -6,22 +6,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <title>EasyDockeFiler</title>
 
   <!-- Bootstrap Core CSS -->
   <link href="/static/css/bootstrap.min.css" rel="stylesheet">
 
+  <!-- Custom Fonts -->
+  <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
   <!-- Custom CSS -->
   <link href="/static/css/sb-admin.css" rel="stylesheet">
   <link href="/static/css/custom.css" rel="stylesheet">
   <link href="/static/css/buttons.css" rel="stylesheet">
-  <!-- <link href="/static/css/jquery-ui.css" rel="stylesheet"> -->
-
-  <!-- Custom Fonts -->
-  <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <!-- CodeMirror CSS -->
   <link  href="/static/css/codemirror.css" rel="stylesheet">
@@ -31,9 +28,8 @@
 
   <!-- Jquery -->
   <script src="/static/js/jquery-1.11.3.min.js"></script>
-  <!-- <script src="/static/js/jquery-ui.min.js"></script> -->
 
-  <!-- Code Mirror JavaScript -->
+  <!-- Code Mirror -->
   <script src="/static/js/codemirror.js"></script>
   <script src="/static/mode/shell-dockerfile/shell.js"></script>
   <script src="/static/js/fullscreen.js"></script>
@@ -51,27 +47,13 @@
   <!-- Marked -->
   <script src="/static/js/marked.min.js"></script>
 
-
-  <!-- Stick Up -->
-  <!-- <script src="/static/js/stickUp.min.js"></script> -->
-
   <script type="text/javascript">
-  //initiating jQuery
-  jQuery(function($) {
-    $(document).ready( function() {
-      //enabling stickUp on the '.navbar-wrapper' class
-      // $('.sticked').stickUp({marginTop: '70px'});
-      $('.sticked').pin({containerSelector: ".container-fluid", minWidth: 1000});
+    jQuery(function($) {
+      $(document).ready( function() {
+        $('.sticked').pin({containerSelector: ".container-fluid", minWidth: 1000});
+      });
     });
-  });
-
   </script>
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
 
 </head>
 
@@ -80,7 +62,6 @@
 
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
           <span class="sr-only">Toggle navigation</span>
@@ -92,6 +73,7 @@
         <a class="navbar-brand" href="index.html">EasyDockerFile</a>
 
       </div>
+
       <!-- Top Menu Items -->
       <ul class="nav navbar-right top-nav">
         <li class="dropdown">
@@ -148,27 +130,12 @@
           </ul>
         </li>
 
-
+        <!-- PlaceHolder -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
           <ul class="dropdown-menu alert-dropdown">
             <li>
               <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
-            </li>
-            <li>
-              <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
-            </li>
-            <li>
-              <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
-            </li>
-            <li>
-              <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
-            </li>
-            <li>
-              <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
-            </li>
-            <li>
-              <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
             </li>
             <li class="divider"></li>
             <li>
@@ -177,7 +144,7 @@
           </ul>
         </li>
 
-
+        <!-- PlaceHolder -->
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
           <ul class="dropdown-menu">
@@ -198,7 +165,7 @@
         </li>
       </ul>
 
-      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <!-- Sidebar Menu -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
           <li>
@@ -263,17 +230,14 @@
         </ul>
       </div>
       <!-- /.navbar-collapse -->
-
-
     </nav>
 
     <div id="page-wrapper">
       <div class="container-fluid">
-        <!-- my layout -->
-        <!-- main content -->
+
+        <!-- Main Content -->
         <div class ="col-lg-5">
           <!-- Page Heading -->
-          <!--<div class="row">-->
           <div class="col-lg-12">
             <h1 id="tutorial-title" class="small-page-header">
               Tutorial
@@ -296,15 +260,11 @@
 
 
           </div>
-          <!--</div>-->
-          <!-- /.row -->
 
-          <!-- <div class="row"> -->
           <div class="col-lg-12 text-left">
             <div id="tutorial-panel" class="panel panel-default article-shadow">
               <div id="tutorial-content" class="panel-body">
                 <!-- Tutorial content goes here -->
-
               </div>
             </div>
           </div>
@@ -329,9 +289,9 @@
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
           </div>
         </div>
-        <!-- end main content -->
+        <!-- /Main Content -->
 
-        <!-- code editor -->
+        <!-- Code Editor -->
         <div class ="col-lg-7 ">
           <div class="panel">
             <div class="sticked">
@@ -359,7 +319,7 @@
             </div>
           </div>
         </div>
-        <!-- end code editor -->
+        <!-- /Code Editor -->
 
         <!--  </div> -->
 

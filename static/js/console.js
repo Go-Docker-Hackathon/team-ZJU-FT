@@ -1,5 +1,5 @@
   var socket;
-  var url_websocket;
+  var url_websocket = "127.0.0.1:8080";
   var url_tutorial;
   var url_code;
 
@@ -7,15 +7,10 @@
   var prev='';
   var next='';
 
-
-
   $(document).ready(function () {
       //============ Create a socket
       //socket = new WebSocket('ws://' + window.location.host + '/console/sync?tutname=' + $('#tutname').text());
-      //socket = new WebSocket('ws://' + '127.0.0.1:8089' + '/console/sync?tutname=' + $('#tutname').text());
-      //socket = new WebSocket('ws://' + '10.10.105.204:8080' + '/v1/testbuild/');
-
-      socket = new WebSocket('ws://' + '10.10.105.204:8080' + '/v1/testbuild/');
+      socket = new WebSocket("ws://" + url_websocket + "/v1/testbuild/");
 
       $("#nav-tutorials").click();
       $("#nav-debug").addClass("active")
@@ -29,19 +24,19 @@
     extraKeys: {
       "F11": function(cm) {
         cm.setOption("fullScreen", !cm.getOption("fullScreen"));
-    },
-    "Esc": function(cm) {
+      },
+      "Esc": function(cm) {
         if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+      }
     }
-  }
   });
-      
+
   $('.CodeMirror').height($(window).height()-200);
   $('#tutorial-panel').css("min-height", function(){
     return $(window).height()-200;
   });
 
-  //============ get tutorial content in markdown
+  //============ render tutorial content from md
   var getTutorial = function(tutname){
     $.ajax({
       type: 'GET',
@@ -73,39 +68,38 @@
 
   getTutorial(tutname);
 
-
   Messenger.options = {
-     parentLocations: ['nav'],
+   parentLocations: ['nav'],
   	   // extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
-        theme: 'flat',
-    }
+       theme: 'flat',
+     }
 
-    socket.onopen = function(){
+     socket.onopen = function(){
       Messenger().post({
         message: 'Server connected.',
         hideAfter : 3,
         type: 'success',
-    });
-  };
+      });
+    };
 
-  socket.onerror = function() {
+    socket.onerror = function() {
       Messenger().post({
         message: 'Error connecting to server.',
         hideAfter : 3,
         type: 'error',
-    });
-  };
+      });
+    };
 
       // Message received on the socket
-  socket.onmessage = function (event) {
+      socket.onmessage = function (event) {
           //var line = JSON.parse(event.data);
-  	$('#console-output').append(event.data)
-  };
+          $('#console-output').append(event.data)
+        };
 
       // Send messages.
       var postCode = function () {
-          var tutname = $('#tutname').text();
-          var content = editor.getValue();
+        var tutname = $('#tutname').text();
+        var content = editor.getValue();
           //socket.send(content);
           //  $.post('/console/sync', 
           //  {
@@ -113,7 +107,6 @@
           //     data: content
           // },
           // function(data){
-          //     console.log(data);
           //     $("console").append(data+"<br>")
           // });
 
@@ -124,45 +117,41 @@
             successMessage: 'Code sent.',
             errorMessage: 'Error sending code.',
             progressMessage: 'Code on the way...'
-        }, {
+          }, {
             /* These options are provided to $.ajax, with success and error wrapped */
             url: '/v1/testbuild/',
             data: {
               tutname:tutname,
               data:content
-          },
-          type: 'POST',
+            },
+            type: 'POST',
 
-          error: function(resp){
+            error: function(resp){
               if (resp.status === 409)
                 return "Error sending code.";
-        }
-    });
-           //=====================
+            }
+          });
 
-       }
+         }
 
-      $('#prev').click(function () {
-            getTutorial(prev);
-      });
-       $('#next').click(function () {
-            getTutorial(next);
-      });
-       $('.nav-item').click(function(){
+         $('#prev').click(function () {
+          getTutorial(prev);
+        });
+         $('#next').click(function () {
+          getTutorial(next);
+        });
+         $('.nav-item').click(function(){
           getTutorial(this.id.substr(4));
-       });
+        });
 
-       $('#submitbtn').click(function () {
+         $('#submitbtn').click(function () {
           postCode();
-      });
+        });
 
-       $('#clearconsolebtn').click(function () {
+         $('#clearconsolebtn').click(function () {
           $('#console-output').html("");
   	//$('#console-output').empty();
   });
-       $('#debugbtn').click(function () {
-          // $('#tut-copy').addClass("active-li");
-                // $('#nav-run').addClass("active-li");
-      //$('#console-output').empty();
-    });
-  });
+    //    $('#debugbtn').click(function () {
+    // });
+});
