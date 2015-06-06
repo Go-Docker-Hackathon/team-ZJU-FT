@@ -21,10 +21,10 @@ func (this *TestController) Get() {
 	_, err := parser.Parse(strings.NewReader(dockerfile))
 	response := make(map[string]string)
 	if err != nil {
-		response["code"] = "200"
+		response["code"] = "404"
 		response["result"] = err.Error()
 	} else {
-		response["code"] = "404"
+		response["code"] = "200"
 		response["result"] = "Congratulations!"
 	}
 
