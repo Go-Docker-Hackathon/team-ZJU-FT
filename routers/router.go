@@ -42,7 +42,7 @@ func init() {
 		),
 		beego.NSNamespace("/test",
 			beego.NSInclude(
-				&controllers.BuildController{},
+				&controllers.TestController{},
 			),
 		),
 		beego.NSNamespace("/term",
