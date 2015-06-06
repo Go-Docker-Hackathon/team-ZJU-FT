@@ -30,16 +30,6 @@ func init() {
 				&controllers.TerminalController{},
 			),
 		),
-		beego.NSNamespace("/object",
-			beego.NSInclude(
-				&controllers.ObjectController{},
-			),
-		),
-		beego.NSNamespace("/user",
-			beego.NSInclude(
-				&controllers.UserController{},
-			),
-		),
 		beego.NSNamespace("/page",
 			beego.NSInclude(
 				&controllers.PageController{},
@@ -60,11 +50,16 @@ func init() {
 				&controllers.TestController{},
 			),
 		),
-		// beego.NSNamespace("/term",
-		// 	beego.NSInclude(
-		// 		&controllers.TermController{},
-		// 	),
-		// ),
+		beego.NSNamespace("/name",
+			beego.NSInclude(
+				&controllers.TmpController{},
+			),
+		),
+		beego.NSNamespace("/term",
+			beego.NSInclude(
+				&controllers.TermController{},
+			),
+		),
 	)
 	beego.AddNamespace(ns)
 	//beego.Router("/", &controllers.PageController{})
