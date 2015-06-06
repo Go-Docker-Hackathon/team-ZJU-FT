@@ -80,6 +80,14 @@ float: none;
   text-shadow: 2px 2px 2px #666; 
 }
 
+#template-title{
+    font-weight: 100;
+  text-transform: uppercase;
+  /*color: #fe4902;*/
+  color : #334;
+  text-shadow: 2px 2px 2px #666; 
+}
+
 #logo-nav {
   margin:5px 0 0 5px;
 }
@@ -92,6 +100,10 @@ float: none;
 }
 
 .nav-item {
+  cursor: pointer;
+}
+
+.nav-item-temp {
   cursor: pointer;
 }
 

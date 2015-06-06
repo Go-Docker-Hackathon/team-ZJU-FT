@@ -15,6 +15,16 @@ import (
 
 func init() {
 	ns := beego.NewNamespace("/v1",
+		beego.NSNamespace("/index",
+			beego.NSInclude(
+				&controllers.HomeController{},
+			),
+		),
+		beego.NSNamespace("/template",
+			beego.NSInclude(
+				&controllers.TemplateController{},
+			),
+		),
 		beego.NSNamespace("/terminal",
 			beego.NSInclude(
 				&controllers.TerminalController{},
@@ -50,11 +60,11 @@ func init() {
 				&controllers.TestController{},
 			),
 		),
-		beego.NSNamespace("/term",
-			beego.NSInclude(
-				&controllers.TermController{},
-			),
-		),
+		// beego.NSNamespace("/term",
+		// 	beego.NSInclude(
+		// 		&controllers.TermController{},
+		// 	),
+		// ),
 	)
 	beego.AddNamespace(ns)
 	//beego.Router("/", &controllers.PageController{})

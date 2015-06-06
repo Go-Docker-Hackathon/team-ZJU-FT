@@ -16,6 +16,5 @@ type PageController struct {
 // @Failure 403 body is empty
 // @router / [get]
 func (o *PageController) Get() {
-
 	o.TplNames = "deploy.html"
 }

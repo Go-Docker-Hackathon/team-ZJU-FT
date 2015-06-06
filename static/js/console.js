@@ -7,6 +7,20 @@
   var prev='';
   var next='';
 
+  function getUrlParameter(sParam)
+  {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++) 
+      {
+          var sParameterName = sURLVariables[i].split('=');
+          if (sParameterName[0] == sParam) 
+          {
+              return sParameterName[1];
+          }
+      }
+  }   
+
   $(document).ready(function () {
       //socket = new WebSocket('ws://' + window.location.host + '/console/sync?tutname=' + $('#tutname').text());
       socket = new WebSocket("ws://" + url_websocket + "/v1/testbuild/");
@@ -28,6 +42,8 @@
       }
     }
   });
+
+  tutname = getUrlParameter('tutname');
 
   $('.CodeMirror').height($(window).height()-200);
   $('#tutorial-panel').css("min-height", function(){
@@ -165,6 +181,10 @@
          $('.nav-item').click(function(){
           getTutorial(this.id.substr(4));
         });
+
+         $('.nav-item-temp').click(function(){
+          window.location.href='./template?name='+this.id.substr(4);
+         });
 
          $('#submitbtn').click(function () {
           postCode();

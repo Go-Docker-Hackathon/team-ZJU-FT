@@ -131,8 +131,8 @@ a:focus {
 
 img#plax-fish {
     position: absolute;
-    top: 125px;
-    left: 90px;
+    top: 200px;
+    left: 100px;
     z-index: 4;
 }
 img#plax-bubbles {
@@ -194,6 +194,7 @@ img#plax-rays {
 
 .intro .intro-body .intro-text {
     font-size: 18px;
+    text-align: left;
 }
 
 @media(min-width:768px) {
@@ -203,12 +204,18 @@ img#plax-rays {
     }
 
     .intro .intro-body .brand-heading {
-        font-size: 100px;
+        font-size: 60px;
+        text-align:left;
     }
 
     .intro .intro-body .intro-text {
         font-size: 26px;
+        text-align: left;
     }
+}
+
+.intro-text{
+    margin:40px;
 }
 
 .btn-circle {
@@ -289,6 +296,11 @@ img#plax-rays {
     padding-top: 100px;
 }
 
+#contents {
+        z-index: 999;
+    position:relative;
+}
+
 .download-section {
     width: 100%;
     padding: 50px 0;
@@ -346,6 +358,20 @@ img#plax-rays {
     background-color: #42dca3;
 }
 
+
+.btn-info:hover{
+    color: #115;
+    font-weight: 500;
+    -webkit-box-shadow: 0 0 50px 5px rgba(100, 150, 250, .4);
+    box-shadow: 0 0 50px 5px rgba(100, 150, 250, .4);
+}
+
+.btn-warning:hover{
+    color: #521;
+    font-weight: 500;
+    -webkit-box-shadow: 0 0 50px 5px rgba(250, 150, 100, .4);
+    box-shadow: 0 0 50px 5px rgba(250, 150, 100, .4);
+}
 ul.banner-social-buttons {
     margin-top: 0;
 }

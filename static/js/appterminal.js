@@ -12,7 +12,7 @@
       //socket = new WebSocket('ws://' + window.location.host + '/console/sync?tutname=' + $('#tutname').text());
       socket = new WebSocket("ws://" + url_websocket + "/v1/testbuild/");
 
-      $("#nav-tutorials").click();
+      // $("#nav-tutorials").click();
       $("#nav-debug").addClass("active");
       //$(".dropdown-menu li a")[2].click();
 
@@ -44,7 +44,7 @@
                 return '';
 
             case 'help':
-                return 'Commands: clear, help, theme, ver or version<br>More help available <a class="external" href="http://github.com/SDA/terminal" target="_blank">here</a>';
+                return 'Commands: clear, help, theme, ver.';
 
             case 'theme':
                 if (args && args[0]) {
@@ -113,7 +113,7 @@
       socket.onmessage = function (event) {
           //var line = JSON.parse(event.data);
           // $('#console-output').append(event.data)
-          terminal.outputLine(event.data);
+          terminal.outputLine(ansi_up.ansi_to_html(event.data));
         };
 
       // Send messages.
@@ -161,7 +161,11 @@
           getTutorial(next);
         });
          $('.nav-item').click(function(){
-          window.location.href='./page';
+          window.location.href='./page?tutname='+this.id.substr(4);
+         });
+
+                  $('.nav-item-temp').click(function(){
+          window.location.href='./template?name='+this.id.substr(4);
          });
 
          $('#submitbtn').click(function () {
