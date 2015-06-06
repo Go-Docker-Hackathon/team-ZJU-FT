@@ -12,8 +12,21 @@
   border-radius: 10px;
 }
 
+#terminal-wrapper {
+  margin-top:100px;
+  padding:0;
+  height:500px;
+  background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAMAAACuX0YVAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAZQTFRFAAAA////pdmf3QAAAAJ0Uk5T/wDltzBKAAAADklEQVR42mJgYGAECDAAAAUAAoeC334AAAAASUVORK5CYII=") top left repeat,rgba(0, 0, 0, 0.9);height:100%;left:0;pointer-events:none;top:0;width:100%;
+}
+.tight{
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+}
+
 #tutorial-panel {
   min-height: 760px;
+  height: 100%;
 }
 
 #tutorial-title {
@@ -22,6 +35,11 @@
   /*color: #fe4902;*/
   color : #334;
   text-shadow: 2px 2px 2px #666; 
+}
+
+#terminal-panel {
+  height:100%;
+  border-radius: 10px;
 }
 
 #logo-nav {
@@ -190,4 +208,8 @@ p.text {
 	-webkit-box-shadow: 0 10px 6px -6px #777;
 	   -moz-box-shadow: 0 10px 6px -6px #777;
 	        box-shadow: 0 10px 6px -6px #777;
+}
+
+.col-terminal{
+  padding:0;
 }

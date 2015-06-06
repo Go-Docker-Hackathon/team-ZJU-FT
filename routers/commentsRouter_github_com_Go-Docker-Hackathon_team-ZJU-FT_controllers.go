@@ -20,6 +20,27 @@ func init() {
 			[]string{"post"},
 			nil})
 
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TerminalController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TerminalController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
+			[]string{"get"},
+			nil})
+
+	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TutorialController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TutorialController"],
+		beego.ControllerComments{
+			"Get",
+			`/`,
+			[]string{"get"},
+			nil})
+
 	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:ObjectController"],
 		beego.ControllerComments{
 			"Post",
@@ -56,20 +77,6 @@ func init() {
 			nil})
 
 	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:PageController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:PageController"],
-		beego.ControllerComments{
-			"Get",
-			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TestController"],
-		beego.ControllerComments{
-			"Get",
-			`/`,
-			[]string{"get"},
-			nil})
-
-	beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TutorialController"] = append(beego.GlobalControllerRouter["github.com/Go-Docker-Hackathon/team-ZJU-FT/controllers:TutorialController"],
 		beego.ControllerComments{
 			"Get",
 			`/`,
