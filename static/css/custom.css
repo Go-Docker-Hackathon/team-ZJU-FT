@@ -1,0 +1,193 @@
+#console-output::-webkit-scrollbar {
+    width: 8px;
+}
+ 
+#console-output::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.3);
+    border-radius: 10px;
+}
+ 
+#console-output::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  border-radius: 10px;
+}
+
+#tutorial-panel {
+  min-height: 760px;
+}
+
+#tutorial-title {
+  font-weight: 100;
+  text-transform: uppercase;
+  /*color: #fe4902;*/
+  color : #334;
+  text-shadow: 2px 2px 2px #666; 
+}
+
+#logo-nav {
+  margin:5px 0 0 5px;
+}
+
+.isStuck {
+  margin-top: 60px;
+}
+.sticked{
+  margin-top: 60px;
+}
+
+.nav-item {
+  cursor: pointer;
+}
+
+.navbar-brand{
+  font: bold 27px Sans-Serif;
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 1);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #3a7eac;
+  border-color: #2c729a;
+}
+
+.transparent_class {
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	opacity: 0.7;
+}
+
+#draggable { width: 150px; height: 150px; padding: 0.5em; }
+
+.code-area {
+  background-color: #36434b;
+}
+
+.drop-shadow {
+    -webkit-box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .2);
+    border-radius:10px;
+}
+.inner-shadow {
+ 	-webkit-box-shadow: inset 0 0 10px #000;
+	   -moz-box-shadow: inset 0 0 10px #000;
+ 			box-shadow: inset 0 0 20px #000;
+}
+.small-page-header {
+  padding-bottom: 2px;
+  margin: 15px 0 15px;
+  border-bottom: 1px solid #eee;
+  font-size:30px;
+}
+.small-breadcrumb {
+  padding: 4px 15px;
+  margin-bottom: 10px;
+  list-style: none;
+  background-color: #f6e9de;
+  border-radius: 4px;
+}
+.small-breadcrumb > li {
+  display: inline-block;
+}
+.small-breadcrumb > li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+}
+.small-breadcrumb > .active {
+  color: #777;
+}
+
+#dragMe {
+  position: absolute;
+  top: 66%;
+  left:52%;
+  width: 400px;
+  height: 250px;
+  border: 1px #333 solid;
+  background: #225776;
+  color: #fff;
+  font-size: 13px;
+  font-family: sans-serif;
+  z-index :20000;
+  opacity: 0.7;
+  border-radius:10px;
+}
+
+#withMe {
+  width: 100%;
+  background: #444;
+  border-bottom: 1px #333 solid;
+  cursor: move;
+  padding: 4px;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+
+}
+
+#dragMe p {
+  padding: 4px;
+  height:89%;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+}
+
+p.text {
+  color: #999;
+  font-size: 32px;
+  font-family: "URW Chancery L", cursive;
+  width: 650px;
+  margin: 0 auto;
+  padding: 200px 0;
+}
+
+#console-output{
+  font: Sans-Serif;
+  text-shadow:2px 2px 2px rgba(0,0,0,.5);
+}
+
+#copy-right {
+  padding-left: 250px;
+  padding-right: 20px;
+}
+
+.footer-footer {
+  margin-top: 0px;
+  padding: 5px;
+  background: #222;
+/*  background: linear-gradient(to right, #153545, #222);
+  background: -moz-linear-gradient(right,153545, #222); /* For Firefox 3.6 to 15 */*/
+}
+.footer-img {
+  left:180px;
+  padding:0;
+  margin:0;
+}
+
+.active-li {
+  background: #000;
+}
+
+.otto {
+  background: #0e8dbc;
+  color: white;
+  text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+}
+
+.article-shadow{
+	-webkit-box-shadow: 0 10px 6px -6px #777;
+	   -moz-box-shadow: 0 10px 6px -6px #777;
+	        box-shadow: 0 10px 6px -6px #777;
+}

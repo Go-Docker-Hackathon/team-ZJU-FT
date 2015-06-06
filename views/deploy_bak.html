@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>EasyDockeFiler</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/static/css/sb-admin.css" rel="stylesheet">
+  <link href="/static/css/custom.css" rel="stylesheet">
+   <link href="/static/css/buttons.css" rel="stylesheet">
+  <!-- <link href="/static/css/jquery-ui.css" rel="stylesheet"> -->
+
+  <!-- Custom Fonts -->
+  <link href="/static/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- CodeMirror CSS -->
+  <link  href="/static/css/codemirror.css" rel="stylesheet">
+  <link  href="/static/css/fullscreen.css" rel="stylesheet">
+  <link  href="/static/css/theme/lesser-dark.css" rel="stylesheet">
+  <link  href="/static/css/simplescrollbars.css" rel="stylesheet">
+
+  <!-- Jquery -->
+  <script src="/static/js/jquery-1.11.3.min.js"></script>
+  <!-- <script src="/static/js/jquery-ui.min.js"></script> -->
+
+  <!-- Code Mirror JavaScript -->
+  <script src="/static/js/codemirror.js"></script>
+  <script src="/static/mode/shell-dockerfile/shell.js"></script>
+  <script src="/static/js/fullscreen.js"></script>
+  <script src="/static/js/simplescrollbars.js"></script>
+
+  <!-- Messenger -->
+  <script src="/static/js/messenger.min.js"></script>
+  <script src="/static/js/messenger-theme-future.js"></script>
+  <link  href="/static/css/messenger.css" rel="stylesheet">
+  <link  href="/static/css/theme/messenger-theme-flat.css" rel="stylesheet">
+
+  <!-- Jquery Pin -->
+  <script src="/static/js/jquery.pin.min.js"></script>
+
+  <!-- Marked -->
+  <script src="/static/js/marked.min.js"></script>
+
+
+  <!-- Stick Up -->
+  <!-- <script src="/static/js/stickUp.min.js"></script> -->
+
+  <script type="text/javascript">
+  //initiating jQuery
+  jQuery(function($) {
+    $(document).ready( function() {
+      //enabling stickUp on the '.navbar-wrapper' class
+      // $('.sticked').stickUp({marginTop: '70px'});
+      $('.sticked').pin({containerSelector: ".container-fluid", minWidth: 1000});
+    });
+  });
+
+  </script>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+  <div id="wrapper">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">EasyDockerFile</a>
+      </div>
+      <!-- Top Menu Items -->
+      <ul class="nav navbar-right top-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-envelope"></i> <b class="caret"></b></a>
+          <ul class="dropdown-menu message-dropdown">
+            <li class="message-preview">
+              <a href="#">
+                <div class="media">
+                  <span class="pull-left">
+                    <img class="media-object" src="http://placehold.it/50x50" alt="">
+                  </span>
+                  <div class="media-body">
+                    <h5 class="media-heading"><strong>John Smith</strong>
+                    </h5>
+                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="message-preview">
+              <a href="#">
+                <div class="media">
+                  <span class="pull-left">
+                    <img class="media-object" src="http://placehold.it/50x50" alt="">
+                  </span>
+                  <div class="media-body">
+                    <h5 class="media-heading"><strong>John Smith</strong>
+                    </h5>
+                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="message-preview">
+              <a href="#">
+                <div class="media">
+                  <span class="pull-left">
+                    <img class="media-object" src="http://placehold.it/50x50" alt="">
+                  </span>
+                  <div class="media-body">
+                    <h5 class="media-heading"><strong>John Smith</strong>
+                    </h5>
+                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="message-footer">
+              <a href="#">Read All New Messages</a>
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i> <b class="caret"></b></a>
+          <ul class="dropdown-menu alert-dropdown">
+            <li>
+              <a href="#">Alert Name <span class="label label-default">Alert Badge</span></a>
+            </li>
+            <li>
+              <a href="#">Alert Name <span class="label label-primary">Alert Badge</span></a>
+            </li>
+            <li>
+              <a href="#">Alert Name <span class="label label-success">Alert Badge</span></a>
+            </li>
+            <li>
+              <a href="#">Alert Name <span class="label label-info">Alert Badge</span></a>
+            </li>
+            <li>
+              <a href="#">Alert Name <span class="label label-warning">Alert Badge</span></a>
+            </li>
+            <li>
+              <a href="#">Alert Name <span class="label label-danger">Alert Badge</span></a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#">View All</a>
+            </li>
+          </ul>
+        </li>
+
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> John Smith <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li>
+              <a href="#"><i class="fa fa-fw fa-user"></i> Profile</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-fw fa-envelope"></i> Inbox</a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-fw fa-gear"></i> Settings</a>
+            </li>
+            <li class="divider"></li>
+            <li>
+              <a href="#"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+      <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class="nav navbar-nav side-nav">
+          <li>
+            <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+          </li>
+          <li>
+            <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
+          </li>
+          <li>
+            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
+          </li>
+          <li>
+            <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
+          </li>
+
+          <li class="active">
+            <a href="bootstrap-grid.html"><i class="fa fa-fw fa-wrench"></i> Bootstrap Grid</a>
+          </li>
+          <li>
+            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v" id="nav-tutorials"></i> Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+            <ul id="demo" class="collapse">
+              <li>
+                <a href="#">Dropdown Item</a>
+              </li>
+              <li>
+                <a href="#">Dropdown Item</a>
+              </li>
+              <li id="nav-debug">
+                <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> debug</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href=""><i class="fa fa-fw fa-desktop"></i> PlayGround</a>
+          </li>
+          <li>
+            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+
+
+    </nav>
+
+    <div id="page-wrapper">
+      <div class="container-fluid">
+        <!-- my layout -->
+        <!-- main content -->
+        <div class ="col-lg-5">
+          <!-- Page Heading -->
+          <!--<div class="row">-->
+          <div class="col-lg-12">
+            <h1 id="tutorial-title" class="small-page-header">
+              Bootstrap Grid
+            </h1>
+            <span id="tutname" style="display: none">tutname</span>
+            <ol class="small-breadcrumb">
+              <li>
+                <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+              </li>
+              <li class="active">
+                <i class="fa fa-wrench"></i> Bootstrap Grid
+              </li>
+              <li>
+              </li>
+              <a id="next" class="myButton pull-right"> next » </a>
+              <a id= "prev" class="myButton pull-right"> « prev </a>
+            </ol>
+
+
+
+          </div>
+          <!--</div>-->
+          <!-- /.row -->
+
+          <!-- <div class="row"> -->
+          <div class="col-lg-12 text-left">
+            <div class="panel panel-default effect1">
+              <div id="tutorial-content" class="panel-body">
+                <!-- Tutorial content goes here -->
+
+              </div>
+            </div>
+          </div>
+
+
+
+          <div class ="row">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES * * */
+            var disqus_shortname = 'daofile';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+          </div>
+
+        </div>
+        <!-- end main content -->
+
+        <!-- code editor -->
+        <div class ="col-lg-7 ">
+          <div class="panel">
+            <div class="sticked">
+
+              <div class="col-lg-12 text-left">
+                <div id="dragMe" class ="transparent_class">
+                  <div id="withMe">
+
+                   <span class="glyphicon glyphicon-console glyphicon-align-left" aria-hidden="true">
+                     <asd style="font-weight:bold;"> CONSOLE </asd>
+                   </div>
+                   <p id="console-output">
+                   </p>
+                 </div>
+                 <article>
+
+                  <form><textarea id="code" name="code" rows="5"></textarea></form>
+                                   <!-- <script>
+                                    var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+                                      lineNumbers: true,
+                                      theme: "lesser-dark",
+ 				scrollbarStyle: "overlay",
+                                      extraKeys: {
+                                        "F11": function(cm) {
+                                          cm.setOption("fullScreen", !cm.getOption("fullScreen"));
+                                        },
+                                        "Esc": function(cm) {
+                                          if (cm.getOption("fullScreen")) cm.setOption("fullScreen", false);
+                                        }
+                                      }
+                                    });
+                                  </script> -->
+                                </article>
+
+                                <a id="submitbtn" class="btn btn-primary " role="button">Submit</a>
+                                <a class="btn btn-default " role="button">Reset</a>
+                                <a id="debugbtn" class="btn btn-default " role="button">debug</a>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end code editor -->
+
+                        <!--  </div> -->
+
+                        <!-- /.row -->
+
+
+                      </div>
+                      <!-- /.container-fluid -->
+
+
+
+                    </div>
+                    <!-- /#page-wrapper -->
+
+                  </div>
+                  <!-- /#wrapper -->
+
+                      <div class="footer-footer">
+                        <footer class="footer">
+                          <div class="container">
+                            <p class="text-muted pull-left">Copyright© 2015 VLISRC, Zhejiang University</p>
+                          </div>
+                        </footer>
+                      </div>
+
+                  <!-- jQuery -->
+                  <script src="/static/js/jquery.js"></script>
+
+                  <!-- Bootstrap Core JavaScript -->
+                  <script src="/static/js/bootstrap.min.js"></script>
+
+
+
+                  <script type="text/javascript">
+                  /* * * CONFIGURATION VARIABLES * * */
+                  var disqus_shortname = 'daofile';
+
+                  /* * * DON'T EDIT BELOW THIS LINE * * */
+                  (function () {
+                    var s = document.createElement('script'); s.async = true;
+                    s.type = 'text/javascript';
+                    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+                    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+                  }());
+                  </script>
+
+                  <!-- DragDrop -->
+                  <script src="/static/js/drag-drop.js"></script>
+
+
+                  <script type="text/javascript">
+
+                  var dragMe = document.getElementById('dragMe');
+                  var withMe = document.getElementById('withMe');
+
+                  var dragRef = DragDrop.bind(dragMe, {
+                    anchor: withMe,
+                    boundingBox: 'offsetParent',
+                  });
+
+                  </script>
+
+                  <script src="/static/js/console.js"></script>
+
+                </body>
+
+                </html>

@@ -1,0 +1,25 @@
+.myButton {
+	background-color:transparent;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:2px 
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-size:14px;
+	padding:0px 17px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.myButton:hover {
+	background-color:#336799;
+	opacity:.7;
+	text-decoration:none;
+	color:#ffffff;
+
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}

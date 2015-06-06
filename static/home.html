@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/grayscale.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"
+<div id="home-wrapper">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+      <div class="container">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                  <i class="fa fa-bars"></i>
+              </button>
+              <a class="navbar-brand page-scroll" href="#page-top">
+                  <i class="fa fa-home"></i>  <span class="light">Easy</span> DockerFile
+              </a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+              <ul class="nav navbar-nav">
+                  <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  <li class="hidden">
+                      <a href="#page-top"></a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#about">About</a>
+                  </li>
+                  <li>
+                      <a class="page-scroll" href="#contact">Contact</a>
+                  </li>
+              </ul>
+          </div>
+          <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container -->
+  </nav>
+
+
+  <!-- Intro Header -->
+  <header class="intro">
+      <img src="img/fish.png" width="500" height="300" data-xrange="50" data-yrange="20" id="plax-fish"/>
+      <img src="img/bubbles.png" width="1000" height="750" data-xrange="30" data-yrange="40"  data-invert="true" id="plax-bubbles"/>
+      <img src="img/rays.png" width="1000" height="750" data-xrange="15" data-yrange="0" data-invert="true"  id="plax-rays"/>
+      <div id="introbody" class="intro-body">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-8 col-md-offset-2">
+                      <h1 class="brand-heading">EasyDockerFile</h1>
+                      <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
+                      <a href="#contents" class="btn btn-circle page-scroll">
+                          <i class="fa fa-angle-double-down animated"></i>
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
+
+  <!-- Contents Section -->
+    <section id="contents" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <btn class="btn btn-default content-item">FROM</btn>
+ <btn class="btn btn-default content-item">MAINTAINER</btn>
+ <btn class="btn btn-default content-item">RUN</btn>
+ <btn class="btn btn-default content-item">CMD</btn>
+ <btn class="btn btn-default content-item">LABEL</btn>
+ <btn class="btn btn-default content-item">EXPOSE</btn>
+ <btn class="btn btn-default content-item">ENV</btn>
+ <btn class="btn btn-default content-item">ADD</btn>
+ <btn class="btn btn-default content-item">COPY</btn>
+ <btn class="btn btn-default content-item">ENTRYPOINT</btn>
+ <btn class="btn btn-default content-item">VOLUME</btn>
+ <btn class="btn btn-default content-item">USER</btn>
+ <btn class="btn btn-default content-item">WORKDIR</btn>
+ <btn class="btn btn-default content-item">ONBUILD</btn>
+            </div>
+        </div>
+    </section>
+
+  <!-- Copyright Section -->
+  <footer>
+    <div class="container text-center">
+        <p>Copyright &copy; Your Website 2014</p>
+    </div>
+  </footer>
+
+
+
+</div>
+<!-- /#home-wrapper -->
+
+
+
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+
+<!-- Plax -->
+<script src="js/plax.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/home.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $('.intro img').plaxify()
+    $.plax.enable()
+  })
+</script>
+
+</body>
+
+</html>
