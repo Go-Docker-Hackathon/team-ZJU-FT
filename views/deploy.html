@@ -94,36 +94,6 @@
                 </div>
               </a>
             </li>
-            <li class="message-preview">
-              <a href="#">
-                <div class="media">
-                  <span class="pull-left">
-                    <img class="media-object" src="http://placehold.it/50x50" alt="">
-                  </span>
-                  <div class="media-body">
-                    <h5 class="media-heading"><strong>John Smith</strong>
-                    </h5>
-                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                  </div>
-                </div>
-              </a>
-            </li>
-            <li class="message-preview">
-              <a href="#">
-                <div class="media">
-                  <span class="pull-left">
-                    <img class="media-object" src="http://placehold.it/50x50" alt="">
-                  </span>
-                  <div class="media-body">
-                    <h5 class="media-heading"><strong>John Smith</strong>
-                    </h5>
-                    <p class="small text-muted"><i class="fa fa-clock-o"></i> Yesterday at 4:32 PM</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur...</p>
-                  </div>
-                </div>
-              </a>
-            </li>
             <li class="message-footer">
               <a href="#">Read All New Messages</a>
             </li>
@@ -166,12 +136,12 @@
       </ul>
 
       <!-- Sidebar Menu -->
-      <div class="collapse navbar-collapse navbar-ex1-collapse">
+      <div id="sidenav" class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav side-nav">
-          <li>
+          <!-- <li>
             <a href=""><i class="fa fa-fw fa-home"></i> Home</a>
-          </li>
-
+          </li> -->
+<!-- FROM", "MAINTAINER", "USER", "LABEL", "ENV", "WORKDIR", "RUN", "COPY", "ADD", "VOLUME", "ONBUILD", "EXPOSE", "ENTRYPOINT", "CMD"} -->
           <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#tutorials"><i class="fa fa-fw fa-arrows-v" id="nav-tutorials"></i> Tutorials <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="tutorials" class="collapse">
@@ -181,51 +151,48 @@
               <li id="nav-maintainer" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> MAINTAINER</a>
               </li>
-              <li id="nav-run" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> RUN</a>
-              </li>
-              <li id="nav-cmd" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> CMD</a>
+              <li id="nav-user" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> USER</a>
               </li>
               <li id="nav-label" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> LABEL</a>
               </li>
-              <li id="nav-expose" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> EXPOSE</a>
-              </li>
               <li id="nav-env" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> ENV</a>
-              </li>
-              <li id="nav-add" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> ADD</a>
-              </li>
-              <li id="nav-copy" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> COPY</a>
-              </li>
-              <li id="nav-entrypoint" class="nav-item"> 
-                <a><i class="fa fa-fw fa-edit"></i> ENTRYPOINT</a>
-              </li>
-              <li id="nav-volume" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> VOLUME</a>
-              </li>
-              <li id="nav-user" class="nav-item">
-                <a><i class="fa fa-fw fa-edit"></i> USER</a>
               </li>
               <li id="nav-workdir" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> WORKDIR</a>
               </li>
+              <li id="nav-run" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> RUN</a>
+              </li>
+              <li id="nav-copy" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> COPY</a>
+              </li>
+              <li id="nav-add" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> ADD</a>
+              </li>
+              <li id="nav-volume" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> VOLUME</a>
+              </li>
               <li id="nav-onbuild" class="nav-item">
                 <a><i class="fa fa-fw fa-edit"></i> ONBUILD</a>
+              </li>
+              <li id="nav-expose" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> EXPOSE</a>
+              </li>
+              <li id="nav-entrypoint" class="nav-item"> 
+                <a><i class="fa fa-fw fa-edit"></i> ENTRYPOINT</a>
+              </li>
+              <li id="nav-cmd" class="nav-item">
+                <a><i class="fa fa-fw fa-edit"></i> CMD</a>
               </li>
             </ul>
           </li>
 
 
           <li>
-            <a href=""><i class="fa fa-fw fa-desktop"></i> PlayGround</a>
-          </li>
-          <li>
-            <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Blank Page</a>
+            <a href="/v1/terminal"><i class="fa fa-fw fa-desktop"></i> PlayGround</a>
           </li>
         </ul>
       </div>
@@ -312,8 +279,7 @@
                 </article>
 
                 <a id="submitbtn" class="btn btn-primary " role="button">Submit</a>
-                <a class="btn btn-default " role="button">Reset</a>
-                <a id="debugbtn" class="btn btn-default " role="button">debug</a>
+                <a id="testbtn" class="btn btn-default " role="button">Test</a>
               </div>
 
             </div>
@@ -366,7 +332,6 @@
   <!-- DragDrop -->
   <script src="/static/js/drag-drop.js"></script>
 
-
   <script type="text/javascript">
 
   var dragMe = document.getElementById('dragMe');
@@ -379,7 +344,7 @@
 
   </script>
 
-  <script src="/static/js/console.js"></script>
+ <script src="/static/js/console.js"></script>
 
 </body>
 

@@ -45,8 +45,8 @@ func (o *TermController) Get() {
 
 	//start the pty
 	// ubuntu:latest
-	//c := exec.Command("docker", "run", "-it", "3f8c74dc67a86bc6", "/bin/bash")
-	c := exec.Command("/bin/bash")
+	c := exec.Command("docker", "run", "-it", "ubuntu:latest", "/bin/bash")
+	//c := exec.Command("/bin/bash")
 	f, err := pty.Start(c)
 	if err != nil {
 		panic(err)
