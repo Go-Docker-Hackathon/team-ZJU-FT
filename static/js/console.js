@@ -1,5 +1,5 @@
   var socket;
-  var url_websocket = "localhost:8082"
+  var url_websocket = "10.211.55.10:8082"
   var url_tutorial;
   var url_code;
 

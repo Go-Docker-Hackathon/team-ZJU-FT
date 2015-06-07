@@ -1,5 +1,5 @@
   var socket;
-  var url_websocket = "127.0.0.1:8082";
+  var url_websocket = "10.211.55.10:8082";
   var url_tutorial;
   var url_code;
 
@@ -10,8 +10,8 @@
   $(document).ready(function () {
       //============ Create a socket
       //socket = new WebSocket('ws://' + window.location.host + '/console/sync?tutname=' + $('#tutname').text());
-      socket = new WebSocket("ws://" + url_websocket + "/v1/testbuild/");
-
+      socket = new WebSocket("ws://" + url_websocket + "/v1/term/");
+	  //alert(socket)
       // $("#nav-tutorials").click();
       $("#nav-debug").addClass("active");
       //$(".dropdown-menu li a")[2].click();
@@ -178,4 +178,31 @@
   });
     //    $('#debugbtn').click(function () {
     // });
+	
+	$('#generatebtn').click(function(){
+		
+	           Messenger().run({
+            action: $.ajax,
+            hideAfter : 3,
+            successMessage: 'Done.',
+            errorMessage: 'Error processing.',
+            progressMessage: 'Guessing...'
+          }, {
+            url: '/v1/cdf/',
+            data: {
+            },
+            type: 'GET',
+
+            error: function(resp){
+              if (resp.status === 409)
+                return "Error sending code.";
+            },
+			success: function(resp){
+				
+				 editor.setValue(resp);
+			}
+          });	
+		
+		
+	});
 });
