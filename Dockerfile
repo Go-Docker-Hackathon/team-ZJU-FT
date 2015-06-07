@@ -14,4 +14,6 @@ RUN go build
 
 EXPOSE 8082
 
-CMD ["./team-ZJU-FT"]
+#CMD ["./team-ZJU-FT"]
+
+CMD /bin/bash
