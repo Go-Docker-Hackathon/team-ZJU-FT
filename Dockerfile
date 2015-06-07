@@ -6,7 +6,7 @@ ENV APPDIR $GOPATH/src/github.com/Go-Docker-Hackathon/team-ZJU-FT
 
 RUN mkdir -p $APPDIR
 
-ADD [".",$APPDIR]
+ADD . $APPDIR
 
 WORKDIR $APPDIR
 
