@@ -14,7 +14,8 @@ type TutorialController struct {
 }
 
 func init() {
-	session, err := mgo.Dial("121.40.236.126")
+	//session, err := mgo.Dial("121.40.236.126")
+	session, err := mgo.Dial("10.10.105.204:27017")
 	if err != nil {
 		panic(err)
 	}
@@ -25,7 +26,7 @@ func init() {
 	fmt.Println("connected")
 }
 
-var names = []string{"FROM", "MAINTAINER", "USER", "LABEL", "ENV", "WORKDIR", "RUN", "COPY", "ADD", "VOLUME", "ONBUILD", "EXPOSE", "ENTRYPOINT", "CMD"}
+var names = []string{"SUMMARIZE", "FROM", "MAINTAINER", "USER", "LABEL", "ENV", "WORKDIR", "RUN", "COPY", "ADD", "VOLUME", "ONBUILD", "EXPOSE", "ENTRYPOINT", "CMD"}
 var index = 0
 var cmd = Command{}
 var c *mgo.Collection
